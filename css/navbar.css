@@ -1,0 +1,83 @@
+.wrapper{
+    position: relative;
+    width: 100%;
+    background: url('./../assets/images/полоски.png') no-repeat ;
+    background-position: 0 calc(100% - 30%);
+    /*padding: 2rem;*/
+
+}
+
+#nav-placeholder{
+    z-index: 1000;
+    display:flex;
+    padding:0.5rem 0;
+    position: absolute;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar__link_item{
+    display:flex;
+    align-items: center;
+    gap:1rem;
+}
+
+.navbar{
+    display:flex;
+    padding:1rem 4rem;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar__links{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1.5rem;
+}
+.utils-group{
+    display:flex;
+    gap:7rem;
+    align-items: center;
+}
+.utils-group_item{
+    margin-right:3rem;
+}
+.main-group{
+    display:flex;
+    gap:6rem;
+}
+.footer{
+    padding:0 1rem 2rem 2rem;
+    display:flex;
+    justify-content: space-between;
+}
+.callIcon{
+    display:none;
+}
+@media (max-width: 1024px){
+    .catalog, .search, .callTitle, .blog-icon{
+        display:none;
+    }
+    .callIcon{
+        display:block;
+    }
+    .utils-group{
+        gap:1rem;
+    }
+    .utils-group_item{
+        margin-right:0;
+    }
+    .wrapper{
+        background: none;
+    }
+
+}
+@media (max-width: 576px){
+    .navbar{
+        padding:1rem 2rem;
+    }
+    .main-group{
+        gap:0;
+    }
+}

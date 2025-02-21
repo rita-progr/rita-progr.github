@@ -1,0 +1,176 @@
+
+
+.slider{
+    width: 100%;
+    overflow: hidden;
+
+}
+.slider-container{
+    display: flex;
+    transition: all 0.7s ease-in-out;
+    gap:1rem;
+    padding: 1rem 2rem;
+    /*padding-top:4rem;*/
+}
+.slide {
+    flex: 1;
+    height:800px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: flex 0.7s ease-in-out;
+    border-radius: 3rem;
+}
+.slide img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.7s ease-in-out;
+    transform: scale(0.7);
+}
+.slide.active {
+    flex: 3; /* Активный слайд в два раза больше других */
+
+}
+.slide.active img {
+    transform: scale(1.5); /* Увеличиваем изображение в 1.5 раза */
+}
+.slider-container__item_1{
+    background-color: #FA8FEF ;
+    background-image: url('./../assets/images/Paint Here Glory.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.slider-container__item_0{
+    background: center/contain url('./../assets/images/Benjamin Moore.svg') no-repeat ;
+    position: relative;
+}
+.slider-container__item_2{
+    /*padding: 2rem;*/
+    background-color: #AECFFF;
+    background-image:url('./../assets/images/Benjamin Moore blue.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.slide__title{
+    color:#D9FF5A;
+    position: absolute;
+    left: 0;
+    top:38%;
+    padding-left: 2rem;
+}
+.slide__description{
+    font-size: 0.9em;
+    max-width: 300px;
+    position: absolute;
+    left: 0;
+    bottom:3%;
+    padding-left: 1rem;
+}
+.title{
+    font-size:1.3rem;
+    font-weight: 500;
+}
+.button_buy{
+    display: flex;
+    position: absolute;
+}
+
+.slide__button{
+    max-width:200px;
+    position: absolute;
+    right: 7%;
+    bottom:7%;
+}
+.remove{
+    display: none !important;
+}
+.add{
+    display: block !important;
+}
+.slide_number{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    bottom:2%;
+}
+.mainSwiper{
+    display: none !important;
+}
+@media(max-width:1024px){
+    #main-container{
+        display: none;
+    }
+    .mainSwiper{
+        display: block !important;
+        max-height:40rem;
+        position: relative;
+    }
+    .mainSwiper-img{
+        position: absolute;
+        bottom:40%;
+        right:1% ;
+        max-width: 200px;
+    }
+    .mainSwiper-img>img{
+        width: 100%;
+    }
+    .mainSwiper-container{
+        padding: 2rem;
+        position: relative;
+        height: 40rem;
+        background-image: url('./../assets/images/лампа.png') , url('./../assets/images/Benjamin Moore.svg');
+        background-repeat: no-repeat;
+        background-position: 48% 0, 48% 30%;
+        background-size: 17rem, contain;
+        display: grid;
+        grid-template-rows: auto auto 10rem 1fr; /* Последний ряд занимает оставшееся пространство */
+    }
+    .mainSwiper-container-1{
+        padding: 2rem;
+        position: relative;
+        height: 40rem;
+        background-color:#FA8FEF ;
+        background-image: url('./../assets/images/стол.png') , url('./../assets/images/Paint Here Glory.svg');
+        background-repeat: no-repeat;
+        background-position: 48% 20%, 48% 30%;
+        background-size: 15rem, contain;
+        display: grid;
+        grid-template-rows: auto auto 10rem 1fr; /* Последний ряд занимает оставшееся пространство */
+    }
+
+    .mainSwiper-container-2{
+        padding: 2rem;
+        position: relative;
+        height: 40rem;
+        background-color:#A5D4FF ;
+        background-image: url('./../assets/images/стол-2.png') , url('./../assets/images/Benjamin Moore blue.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 20%, 48% 30%;
+        background-size: 13rem, contain;
+        display: grid;
+        grid-template-rows: auto auto 10rem 1fr; /* Последний ряд занимает оставшееся пространство */
+    }
+
+    .mainSwiper-end_img{
+        position: absolute;
+       bottom:1.7rem;
+       left:5rem ;
+
+    }
+
+    .mainSwiper-end{
+        position: absolute;
+        bottom:8rem;
+        left:1rem;
+    }
+    .mainSwiper-title{
+        font-size:1.5rem ;
+    }
+}
